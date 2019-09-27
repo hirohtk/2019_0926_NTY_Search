@@ -4,11 +4,33 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
  
+    <script type="text/javascript">
 
+        var search = "sandwich";
+
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + "&api-key=qAzUKebmdGmoXyd2PSOcvzAhFEpdxQPj"
+
+        // Creates AJAX call for the specific movie button being clicked
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+
+            console.log(response);
+
+            var headline = response.doc[i].headline.main;
+            
+
+
+        });
+
+
+    </script>
    
 
 </body>
